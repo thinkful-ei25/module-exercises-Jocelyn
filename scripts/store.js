@@ -14,6 +14,7 @@ const store = (function(){
     items, 
     hideCheckedItems,
     searchTerm,
+    
   };
 
 }());
