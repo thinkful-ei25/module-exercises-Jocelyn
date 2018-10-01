@@ -24,7 +24,7 @@ const store = (function(){
     }
   };
   const findAndToggleChecked = function(id) {
-    let found = this.findbyId(id);
+    let found = findbyId(id);
     found.checked = !found.checked;
   };
 
@@ -39,7 +39,8 @@ const store = (function(){
   };
 
   const findAndDelete = function(id){
-    delete this.items.filter(id);
+    const index = findbyId(item => item.id === id); 
+    store.items.splice(index, 1); 
   };
 
   return {
